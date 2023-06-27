@@ -22,17 +22,17 @@ export default function Filter() {
   return (
     <div className='flex items-center justify-between flex-row'>
       <div className='flex items-center'>
-        <span className='text-sm font-medium text-gray-900'>فیلتر براساس:</span>
+        <span className='text-xs font-medium text-gray-900'>فیلتر براساس:</span>
         <Label>نام گروه :</Label>
-        <Input type='input' value={nameInput} onChange={setName}/>
+        <div className='w-[300px]'><Input type='input' value={nameInput} onChange={setName} /></div>
         <Label>شناسه گروه:</Label>
-        <Input type='number' value={index} onChange={setIndex}/>
-        <Label>:نام سامانه</Label>
-        <Input type='string' value={system} onChange={setSystem} />
+        <div className='w-[150px]'><Input type='number' value={index} onChange={setIndex}/></div>
+        <Label>نام سامانه:</Label>
+        <div className="w-[150px] mr-1"><Input type='string' value={system} onChange={setSystem} /></div>
         <Button onClick={handleFilterSubmit} value='اعمال فیلتر' apply/>
       </div> 
       <div className='flex items-center flex-row'>
-        <span className='text-sm text-gray-400 font-medium'>{KhabarService.lenght} گروه</span>
+        <span className='text-sm text-gray-400 font-medium ml-3'>{KhabarService.lenght}  گروه</span>
         <Link to={'/newpost'}>
           <Button Icon={SVGIco} value={"افزودن گروه"}/>
         </Link>
