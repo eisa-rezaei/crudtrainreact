@@ -9,8 +9,8 @@ interface ButtonInterface {
 }
 function Button({value, Icon, primary,  apply,onClick,type} :ButtonInterface) {
   return ( 
-    <button type={type} onClick={()=>{if(onClick)onClick()}} className={['flex rounded-full py-2 px-4 flex-row text-sm items-center text-white first-letter:', primary ? 'bg-primaryBtn':apply ?'bg-labelColor':'bg-goldbtn font-medium px-6'].join(" ")}>
-      <div className='mr-1'>{value}</div>
+    <button type={type} onClick={()=>{if(onClick)onClick()}} className={['flex align-middle rounded-full font-bold text-sm py-2  min-w-[100px] justify-evenly flex-row-reverse items-center text-white', primary ? 'bg-primaryBtn':apply ?'bg-labelColor':'bg-goldbtn font-medium px-6'].join(" ")}>
+      <div className='mr-1 text-center w-full'>{value}</div>
       <div>{Icon &&<Icon/>}</div>
     </button>
   )

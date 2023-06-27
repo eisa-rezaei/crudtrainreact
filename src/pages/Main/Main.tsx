@@ -13,11 +13,10 @@ export default function Main() {
     const Data =await Akhbar.getPosts(10) as PostKhabar[];
     UpdatePost(Data);
     SetFiltered(Data);
-    console.log(Data)
   }
   
   return (
-    <main className='px-48 py-6'>
+    <main className='px-20 py-6'>
       <Filter/>
       <hr className='my-4 bg-black text-black border-gray-500'/>
       <Feed/>

@@ -1,12 +1,14 @@
-import React, { useState,useContext } from 'react'
+import React, { useState} from 'react'
 import Input from '../../components/Ui/Input'
-import Tag from '../../components/Ui/Tag'
+import Tag from '../../components/Posts/Tag'
 import Button from '../../components/Ui/Button'
-import { ReactComponent as SVGIco } from '../../assets/Frame 347.svg'
+import { ReactComponent as SVGIco } from '../../assets/addd.svg'
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import { NewPostForm } from '../../models/posts'
 import KhabarService from '../../services/Akhbar'
+import { useNavigate } from 'react-router-dom'
 function Addpost() {
+    const navigate = useNavigate();
     const { control, handleSubmit } = useForm({
         defaultValues: {
             name: "",
@@ -25,7 +27,10 @@ function Addpost() {
         name : data.name,
         tags : tags
       }
-      KhabarService.addPost(newpost).then((res)=>{alert(res)}).catch((err)=>{alert(err)});
+      KhabarService.addPost(newpost).then((res)=>{
+        alert("New post have been added");
+        navigate('/');
+      }).catch((err)=>{alert("error on adding new post")});
     }
     const [tags , setTags] = useState<string[]>(['سامانه پیشفرض']);
     const [tag , setTag] = useState("")

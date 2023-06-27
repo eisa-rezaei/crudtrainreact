@@ -1,10 +1,12 @@
 import React,{useState,useContext} from 'react'
 import Input from '../../components/Ui/Input'
 import Button from '../../components/Ui/Button'
-import { ReactComponent as SVGIco } from '../../assets/Frame 347.svg'
+import { ReactComponent as SVGIco } from '../../assets/addd.svg'
 import Label from '../../components/Ui/Label'
 import PostKhabar, { PostContextType } from '../../models/posts'
 import { PostContext } from '../../context/Postcontext'
+import {Link} from 'react-router-dom'
+import KhabarService from '../../services/Akhbar'
 export default function Filter() {
   const { Posts,SetFiltered} = useContext(PostContext) as PostContextType; 
   const [nameInput, setName]= useState("");
@@ -30,9 +32,11 @@ export default function Filter() {
         <Button onClick={handleFilterSubmit} value='اعمال فیلتر' apply/>
       </div> 
       <div className='flex items-center flex-row'>
-        <span className='text-sm text-gray-400 font-medium'>52 گروه</span>
-        <Button Icon={SVGIco} value={"افزودن گروه"}/>
+        <span className='text-sm text-gray-400 font-medium'>{KhabarService.lenght} گروه</span>
+        <Link to={'/newpost'}>
+          <Button Icon={SVGIco} value={"افزودن گروه"}/>
+        </Link>
       </div>
     </div>
-  )
+  ) 
 }

@@ -10,7 +10,7 @@ export default function Feed() {
   {
      await Akhbar.deletePost(id); 
      // fetch again ? await Akhbar.get(10)
-     const newPosts = Filtered.filter((value:PostKhabar,index : number)=>
+     const newPosts = Filtered.filter((value:PostKhabar)=>
      {
         return value.id !==id;
      })
@@ -18,8 +18,8 @@ export default function Feed() {
   }
   return (
       <div className=" grid gap-x-8 gap-y-4 mt-4 w-12/12 grid-cols-2">
-        {Filtered.map((value , index)=>{
-            return <PostItem onDelete={onDeleteHandle} item={value}/> 
+        {Filtered.map((value)=>{
+            return <PostItem onDelete={onDeleteHandle} key={value.id} item={value}/> 
         })} 
     </div>
   )

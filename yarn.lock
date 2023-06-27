@@ -2366,6 +2366,11 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/jalaali-js@^1.1.1":
+  "integrity" "sha512-WlNLd1NZ2PCC+PlCuIKo92gc+RhQxfQ7nbGTWZgV5YZG3h/DZxMOSBVZYtc3Vwqx5eMF24xiUirFP9ibCS9EYQ=="
+  "resolved" "https://registry.npmjs.org/@types/jalaali-js/-/jalaali-js-1.1.1.tgz"
+  "version" "1.1.1"
+
 "@types/jest@*":
   "integrity" "sha512-mSoZVJF5YzGVCk+FsDxzDuH7s+SCkzrgKZzf0Z0T2WudhBUPoF6ktoTPC4R0ZoCPCV5xUvuU6ias5NvxcBcMMg=="
   "resolved" "https://registry.npmjs.org/@types/jest/-/jest-29.5.2.tgz"
@@ -6067,6 +6072,11 @@
     "chalk" "^4.0.2"
     "filelist" "^1.0.4"
     "minimatch" "^3.1.2"
+
+"jalaali-js@^1.2.6":
+  "integrity" "sha512-io974va+Qyu+UfuVX3UIAgJlxLhAMx9Y8VMfh+IG00Js7hXQo1qNQuwSiSa0xxco0SVgx5HWNkaiCcV+aZ8WPw=="
+  "resolved" "https://registry.npmjs.org/jalaali-js/-/jalaali-js-1.2.6.tgz"
+  "version" "1.2.6"
 
 "jest-changed-files@^27.5.1":
   "integrity" "sha512-buBLMiByfWGCoMsLLzGUUSpAmIAGnbR2KJoMN10ziLhOLvP4e0SlypHnAel8iqQXTrcbmfEY9sSqae5sgUsTvw=="

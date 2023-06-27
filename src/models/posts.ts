@@ -2,7 +2,7 @@ interface PostKhabar {
     id : number,
     index: number,
     name : string,
-    register : Date,
+    registered : Date,
     tags : string[],
     age : number
 }
