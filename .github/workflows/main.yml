@@ -15,10 +15,10 @@ jobs:
           node-version: '14.x'
 
       - name: Install 🎢
-        run: yarn install --force
+        run: npm install --force
 
       - name: Build 🧩
-        run: yarn run build
+        run: npm run build
         env:
           CI: true
 
